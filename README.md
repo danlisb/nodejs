@@ -1,3 +1,3 @@
 # expressjs
-expressjs stuff\
+expressjs / node jsstuff\
 dependências: express.js -> https://expressjs.com/pt-br/

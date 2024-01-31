@@ -18,6 +18,11 @@ const camisetas = {
   }
 }
 
+// Rota inicial
+app.get('', (req, res) => {
+  res.send({mensagem: 'Olá, Turma de ES2!'});
+});
+
 // Rota para obter todas as camisetas
 app.get('/camisetas', (req, res) => {
   res.status(200).json(camisetas);
@@ -59,7 +64,7 @@ app.delete('/camisetas/:id', (req, res) => {
     return res.status(404).json({ error: 'Camiseta não encontrada' });
   }
 
-  // Simulando a exclusão de uma camiseta
+  // Exclusão de uma camiseta
   delete camisetas[camisetaId];
 
   return res.status(200).json(camiseta);
